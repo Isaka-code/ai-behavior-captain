@@ -1,9 +1,9 @@
 ﻿ID,NAME,count,like,dislike
-000, study, 0, 1, 1
-001, reading, 0, 1, 1
-002, sleep, 0, 1, 1
-003, eating, 0, 1, 1
-004, traing, 0, 1, 1
-005, take a bath, 0, 1, 1
-006, walking, 0, 1, 1
-007, coding, 0, 1, 1
+0, study, 0, 1, 1
+1, reading, 0, 1, 1
+2, sleep, 0, 1, 1
+3, eating, 0, 1, 1
+4, traing, 0, 1, 1
+5, take a bath, 0, 1, 1
+6, walking, 0, 1, 1
+7, coding, 0, 1, 1

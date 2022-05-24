@@ -23,19 +23,32 @@ def get_actions():
     print(action_0, action_1, action_2)
     return action_0, action_1, action_2
 
+def write_action(NAME):
+    """
+    入力された行動をbehaviors.csvに書き込む
+    """
+    last_ID = df_behaviors.ID.iloc[-1]
+    print(last_ID)
+    print(df_behaviors.index)
+    print(df_behaviors.columns)
+    df_behaviors.loc[last_ID + 1] = [last_ID + 1, NAME, 0, 0, 0]
+    
 
 # GUI app
 
 action_0, action_1, action_2 = get_actions()
 layout = [
     [sg.Button('AIおすすめボタン', key="-SUBMIT-")],
+    [sg.Text(key="-AMOUNT-", size=(10, 1))],
     [sg.Text('行動1位:'), sg.Button(f'{action_0}', key="-BEHAVIOR1-")],
     [sg.Text('行動2位:'), sg.Button(f'{action_1}', key="-BEHAVIOR2-")],
     [sg.Text('行動3位:'), sg.Button(f'{action_2}', key="-BEHAVIOR3-")],
-    [sg.Text(key="-AMOUNT-", size=(120, 10))]
+    [sg.Text(key="-AMOUNT-", size=(10, 1))],
+    [sg.Button('行動を追加する', key="-ADD-"), sg.InputText(key="-NEW_ACTION-", size=(120, 1))],
+    [sg.Text(key="-ANNOUNCEMENT-", size=(10, 1))],
 ]
 
-window = sg.Window("AI Behavior Captain", layout=layout, size=(300, 150))
+window = sg.Window("AI Behavior Captain", layout=layout, size=(300, 350))
 
 while True:
     event, values = window.read()
@@ -45,6 +58,11 @@ while True:
         window["-BEHAVIOR1-"].update(action_0)
         window["-BEHAVIOR2-"].update(action_1)
         window["-BEHAVIOR3-"].update(action_2)
+    if event == "-ADD-":
+        NAME = values["-NEW_ACTION-"]
+        print(NAME)
+        write_action(NAME)
+        window["-ANNOUNCEMENT-"].update(f"{NAME} added !")
 
     if event == sg.WIN_CLOSED:
         break
