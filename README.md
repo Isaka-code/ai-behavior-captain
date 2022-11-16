@@ -1,19 +1,13 @@
 # AI Behavior Captain
-AIによる行動レコメンドアプリ”AI Behavior Captain”を開発する。  
+AI Behavior Captain とは、AIによる行動レコメンドアプリです。  
+自分の行動をAIに決めてほしいときに使ってください。
 
 
 # 使い方
-python ai_behavior_captain.py  
-AIおすすめボタンを押すとおすすめの行動が表示されます
+・Pythonコードを実行するとGUIアプリが起動します
+$ python ai_behavior_captain.py  
+・”AIおすすめボタン”を押すとおすすめの行動が表示されます  
+・”行動を追加する”をクリックすると、テキストボックスの中身が行動リストに追加されます。
 
-# 今後の予定
+<img src=images/screen_shot_1.png width="300">
 
-・sqliteに変更  
-・csv書き込み機能とリセット機能  
-・履歴書き込み機能とリセット機能とタイマー機能 
-・行動の評価ボタンを追加  
-・教師あり学習の実装  
-・強化学習の実装  
-・推薦システムの実装  
-・いろんな人に使ってもらい、各人のコピーAIをつくる  
-・各人のコピーをNFTで保護する  

@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# specific file
+pysimplegui_sapu.py
+README_memo.md
