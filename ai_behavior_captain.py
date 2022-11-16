@@ -5,7 +5,7 @@ import pandas as pd
 import random
 
 
-# DB
+# データベース関連
 df_behaviors = pd.read_csv("behaviors.csv") # 行動のリストをメモしたcsv
 df_history = pd.read_csv("history.csv") # 行動の履歴をメモしたcsv
 
@@ -32,9 +32,10 @@ def write_action(NAME):
     print(df_behaviors.index)
     print(df_behaviors.columns)
     df_behaviors.loc[last_ID + 1] = [last_ID + 1, NAME, 0, 0, 0]
+    # 書き込む
     
 
-# GUI app
+# GUI アプリ関連
 
 action_0, action_1, action_2 = get_actions()
 layout = [
