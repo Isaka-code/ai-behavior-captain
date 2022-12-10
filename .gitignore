@@ -131,3 +131,7 @@ dmypy.json
 # specific file
 pysimplegui_sapu.py
 README_memo.md
+data_bak/
+data_bak2/
+images/過去のスクリーンショット/
+qiita.md

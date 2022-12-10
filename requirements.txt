@@ -1,0 +1,5 @@
+PySimpleGUI
+pandas
+numpy
+scipy
+pyautogui
